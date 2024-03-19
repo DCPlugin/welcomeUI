@@ -1,0 +1,16 @@
+event onPlayerJoined(player,key){
+    player.effects.sendUI(22133, 22, Title, Comment);
+    player.effects.showCursor();
+}
+
+event onEffectButtonClicked(player,key){
+    if(key == "Discord_Button"){
+        player.browserRequest(discordinvitemessage, discordinvitelink);
+    }
+}
+
+event onEffectButtonClicked(player,key){
+    if(key == "Close_Button"){
+        player.effects.clearUIById(22133);
+        player.effects.hideCursor();
+    }
